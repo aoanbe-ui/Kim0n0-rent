@@ -207,7 +207,7 @@ body {
     border-radius: 30px;
     border: 15px solid rgba(181, 126, 126, 0.62);
     overflow: hidden;
-    box-shadow: inset 222px 4px 4px 102px rgba(255, 177, 181, 0.09);
+    box-shadow: inset 245px 4px 4px 109px rgba(255, 177, 201, 0.22);
 }
 
 .product-card:nth-child(2) .product-image {
@@ -217,11 +217,11 @@ body {
 
 .product-card:nth-child(3) .product-image {
     border-color: #dca9ab;
-    box-shadow: inset 344px 4px 4px 0px rgba(252, 171, 179, 0.16);
+    box-shadow: inset 245px 4px 4px 109px rgba(255, 177, 201, 0.22);
 }
 
 .product-image img {
-    width: 100%;
+    width: 160.52%;
     height: 100%;
     object-fit: cover;
 }
@@ -233,8 +233,8 @@ body {
 }
 
 .product-card:nth-child(3) .product-image img {
-    width: 107.12%;
-    height: 100.05%;
+    width: 160.52%;
+    height: 100.%;
     margin-left: -7.12%;
 }
 
@@ -283,7 +283,7 @@ body {
     left: -6px;
     width: 319px;
     height: 52px;
-    background: linear-gradient(to right, #fdeeec 0%, #fdeeec 47.02%, #dca9ab 47.02%, #dca9ab 100%);
+    background: white;
     border: 2px solid #cd9898;
     border-radius: 40px;
     font-family: 'Inter', sans-serif;
