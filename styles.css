@@ -11,20 +11,20 @@ body {
 }
 
 .container {
-    position: relative;
-    width: 1356px;
-    min-height: 3900px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
     background-color: #f9d5d8;
     border-radius: 30px;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .background-image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1356px;
+    width: 100%;
     height: 668px;
     pointer-events: none;
 }
@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 1356px;
+    width: 100%px;
     height: 64px;
     background-color: rgba(255, 196, 203, 0.52);
     display: flex;
@@ -115,99 +115,77 @@ body {
 }
 
 .hero {
-    position: absolute;
-    top: 181px;
-    left: 277px;
-    text-align: center;
+    position: relative;
+    height: 668px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-title {
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 700;
-    font-size: 90px;
-    color: white;
-    letter-spacing: 0;
-    line-height: normal;
-}
-
-.hero-underline {
-    position: absolute;
-    top: 179px;
-    left: 1px;
-    width: 800px;
-    height: 6px;
-    background-color: white;
+    font-size: clamp(40px, 6vw, 90px);
+    text-align: center;
 }
 
 .hero-subtitle {
-    position: absolute;
-    top: 174px;
-    left: -28px;
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 600;
-    font-size: 34px;
-    color: white;
-    white-space: nowrap;
+    position: static;
+    margin-top: 20px;
+    font-size: clamp(18px, 2.5vw, 34px);
+    text-align: center;
+}
+
+.hero-underline {
+    position: static;
+    margin-top: 10px;
+    width: 60%;
 }
 
 .intro-section {
-    position: absolute;
-    top: 787px;
-    left: 0;
-    width: 100%;
+    position: relative;
+    margin-top: 80px;
     text-align: center;
 }
 
 .intro-title {
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 500;
-    font-size: 36px;
-    color: #6d2c2c;
-    margin: 0 auto;
-    padding: 0 315px;
+    font-size: clamp(22px, 3vw, 36px);
+    padding: 0 20px;
 }
 
 .intro-subtitle {
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 300;
-    font-size: 24px;
-    color: #6d2c2c;
-    margin-top: 138px;
-    padding: 0 315px;
+    font-size: clamp(16px, 2vw, 24px);
+    margin-top: 30px;
+    padding: 0 20px;
 }
 
 .divider-line {
-    position: absolute;
-    top: 314px;
-    left: 467px;
-    width: 432px;
-    height: 1px;
-    background-color: black;
+    position: static;
+    margin: 40px auto;
 }
 
 .products {
-    position: absolute;
-    top: 1167px;
-    left: 119px;
-    width: 1117px;
-    height: 496px;
-    display: flex;
-    gap: 95px;
+    position: relative;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+
+    padding: 0 40px;
+    margin-top: 80px;
 }
 
 .product-card {
-    position: relative;
-    width: 309px;
-    height: 496px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-image {
-    width: 309px;
+    width: 100%;
+    max-width: 309px;
     height: 496px;
-    border-radius: 30px;
-    border: 15px solid rgba(181, 126, 126, 0.62);
-    overflow: hidden;
-    box-shadow: inset 245px 4px 4px 109px rgba(255, 177, 201, 0.22);
 }
 
 .product-card:nth-child(2) .product-image {
@@ -278,20 +256,27 @@ body {
 }
 
 .btn-rent-product {
-    position: absolute;
-    bottom: -108px;
-    left: -6px;
-    width: 319px;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 309px;
     height: 52px;
+
     background: white;
     border: 2px solid #cd9898;
     border-radius: 40px;
+
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;
     color: #cd9898;
+
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.btn-rent-product:hover {
+    transform: scale(1.05);
+    background-color: #fdeeec;
 }
 
 .product-card:nth-child(2) .btn-rent-product {
@@ -302,33 +287,21 @@ body {
     left: -10px;
 }
 
-.btn-rent-product:hover {
-    transform: scale(1.02);
-}
-
 .safety-section {
-    position: absolute;
-    top: 1934px;
-    left: 274px;
-    width: 954px;
+    margin: 120px auto;
+    max-width: 900px;
+    padding: 0 20px;
 }
 
 .safety-content {
-    position: relative;
-    height: 345.5px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .safety-text {
-    position: absolute;
-    right: 40px;
-    top: 14px;
-    font-family: 'Inknut Antiqua', serif;
-    font-weight: 600;
-    font-size: 32px;
-    color: #6d2c2c;
+    position: static;
+    font-size: clamp(18px, 2.5vw, 32px);
     text-align: right;
-    line-height: 1.5;
-    letter-spacing: 3.2px;
 }
 
 .vertical-divider {
@@ -350,21 +323,18 @@ body {
 }
 
 .testimonials {
-    position: absolute;
-    top: 2550px;
-    left: 176px;
-    width: 1004px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
 }
 
 .testimonial-card {
-    position: relative;
-    width: 698px;
-    height: 346px;
-    background-color: #dca9ab;
-    border: 1px solid rgba(96, 50, 55, 0.75);
-    border-radius: 50px;
-    box-shadow: -15px -10px 18px 0px rgba(0, 0, 0, 0.25);
-    margin-bottom: 118px;
+    width: 90%;
+    max-width: 700px;
+    height: auto;
+    padding: 40px;
 }
 
 .testimonial-2 {
@@ -416,11 +386,13 @@ body {
 }
 
 .social-section {
-    position: absolute;
-    top: 3310px;
-    left: 0;
-    width: 100%;
+    margin-top: 150px;
     text-align: center;
+    padding: 0 20px;
+}
+
+.social-icons {
+    flex-wrap: wrap;
 }
 
 .social-title {
@@ -536,6 +508,25 @@ body {
     border-radius: 20px;
     transform: translateY(40px) scale(0.95);
     transition: all 0.4s ease;
+}
+
+@media (max-width: 768px) {
+
+    .nav {
+        display: none;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .safety-content {
+        justify-content: center;
+    }
+
+    .safety-text {
+        text-align: center;
+    }
 }
 
 .modal:target .modal-content {
