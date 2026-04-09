@@ -475,3 +475,69 @@ body {
     background-color: #f5dfe1;
     transform: scale(1.02);
 }
+
+.btn-rent-header,
+.btn-rent-product {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.btn-rent-header::before,
+.btn-rent-product::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease;
+    border-radius: 40px;
+    z-index: 0;
+}
+
+.btn-rent-header:hover::before,
+.btn-rent-product:hover::before {
+    width: 100%;
+}
+
+.btn-rent-header:hover,
+.btn-rent-product:hover {
+    transform: scale(1.05);
+}
+
+/* keep text above animation */
+.btn-rent-header,
+.btn-rent-product {
+    z-index: 1;
+}
+/* === MODAL SYSTEM === */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 223, 223, 0.9);
+    backdrop-filter: blur(4px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #eeb9ba;
+    padding: 40px;
+    border-radius: 20px;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.4s ease;
+}
+
+.modal:target .modal-content {
+    transform: translateY(0) scale(1);
+}
