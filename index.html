@@ -138,14 +138,86 @@
             <button class="btn-go-now">Go now!</button>
         </section>
     </div>
-</body>
-</html>
-<div id="login" class="modal">
-    <a href="#" class="modal-backdrop"></a>
 
-    <div class="modal-content">
-        <h2>Login</h2>
-        <input type="text" placeholder="Name">
-        <input type="password" placeholder="Password">
+<!-- Login Modal -->
+    <div id="login" class="modal">
+      <!-- Clicking this backdrop returns the hash to #, closing the modal -->
+      <a href="#" class="modal-backdrop z-0 cursor-default"></a>
+      
+      <div class="modal-content bg-[#eeb9ba] rounded-[30px] w-full max-w-[658px] min-h-[658px] shadow-2xl relative overflow-hidden flex flex-col items-center pt-32 pb-16 mx-4">
+        
+        <div class="absolute top-0 left-0 w-full flex h-[154px]">
+          <!-- Active Tab -->
+          <div class="w-1/2 flex items-center justify-center bg-[#eeb9ba] rounded-tl-[30px] z-10">
+            <span class="font-['Inknut_Antiqua'] font-medium text-[36px] text-black underline decoration-[3px] underline-offset-[10px] opacity-80 cursor-default">
+              Login
+            </span>
+          </div>
+          <!-- Inactive Tab -> routes to #signup -->
+          <a href="#signup" class="w-1/2 flex items-center justify-center bg-[#e1acac] rounded-bl-[30px] rounded-tr-[30px] tab-link">
+            <span class="font-['Inknut_Antiqua'] font-medium text-[36px] text-black opacity-40">
+              Sign up
+            </span>
+          </a>
+        </div>
+
+        <div class="w-full flex flex-col items-center px-4 mt-8">
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="text" placeholder="Name" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="password" placeholder="Password" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          
+          <p class="font-['Inknut_Antiqua'] font-medium text-[20px] md:text-[26px] text-black text-center mt-12 underline decoration-dotted decoration-[2px] underline-offset-8 opacity-80 tracking-wide">
+            \ WELCOME /
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- Signup Modal -->
+    <div id="signup" class="modal">
+      <a href="#" class="modal-backdrop z-0 cursor-default"></a>
+      
+      <div class="modal-content bg-[#eeb9ba] rounded-[30px] w-full max-w-[703px] min-h-[995px] shadow-2xl relative overflow-hidden flex flex-col items-center pt-32 pb-16 mx-4">
+        
+        <div class="absolute top-0 left-0 w-full flex h-[154px]">
+          <!-- Inactive Tab -> routes to #login -->
+          <a href="#login" class="w-1/2 flex items-center justify-center bg-[#e1acac] rounded-br-[30px] rounded-tl-[30px] tab-link">
+            <span class="font-['Inknut_Antiqua'] font-medium text-[36px] text-black opacity-40">
+              Login
+            </span>
+          </a>
+          <!-- Active Tab -->
+          <div class="w-1/2 flex items-center justify-center bg-[#eeb9ba] rounded-tr-[30px] z-10">
+            <span class="font-['Inknut_Antiqua'] font-medium text-[36px] text-black underline decoration-[3px] underline-offset-[10px] opacity-80 cursor-default">
+              Sign up
+            </span>
+          </div>
+        </div>
+        <div class="w-full flex flex-col items-center px-4 mt-12">
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="text" placeholder="Name" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="email" placeholder="Email" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="password" placeholder="Password" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          <div class="w-full max-w-[542px] mb-8 h-[100px] md:h-[130px] bg-[#ffd3d4] border-2 border-[#e4a6a6] rounded-[20px] shadow-[0px_4px_17.4px_-4px_rgba(0,0,0,0.25)] flex items-center px-8 relative overflow-hidden">
+            <input type="password" placeholder="Confirm password" class="w-full h-full bg-transparent outline-none font-['Inknut_Antiqua'] font-medium text-[24px] md:text-[36px] text-black placeholder:text-black/40" />
+          </div>
+          
+          <button class="font-['Inknut_Antiqua'] font-medium text-[20px] md:text-[26px] text-black text-center mt-8 underline decoration-dotted decoration-[2px] underline-offset-8 opacity-80 hover:opacity-100 transition-opacity cursor-pointer bg-transparent border-none">
+            CREATE AN ACCOUNT
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    </body>
+</html>
 </div>
